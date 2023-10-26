@@ -1,3 +1,12 @@
+# get outa here you nosey fucker
+# i mean you can look at the code but like
+# don't fuck up my precious hacky code :)))
+
+# doge.com was here
+# doge.com made this
+# doge.com will be sad if you fuck this up
+# i am
+# doge.com
 import yt_dlp as ydl
 from moviepy.video.io.VideoFileClip import VideoFileClip
 import os
