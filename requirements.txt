@@ -1,4 +1,3 @@
 yt_dlp
 moviepy
-os
 shutil
