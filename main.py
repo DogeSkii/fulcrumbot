@@ -65,22 +65,22 @@ def split_video(video_path, output_folder, split_duration=60):
     video_clip.close()
     return split_files
 
-def delete_and_rearrange(output_folder, split_files):
-    if len(split_files) < 2:
-        print("Insufficient split files to rearrange.")
-        return
-
-    os.remove(split_files[0])  # Delete the first split file
-
-    temp_folder = os.path.abspath("temp")
-    os.makedirs(temp_folder, exist_ok=True)
-
-    for i, filename in enumerate(split_files[1:]):
-        new_filename = os.path.join(temp_folder, f"reordered_part_{i+1}.mp4")
-        shutil.copy(filename, new_filename)
-
-    shutil.rmtree(output_folder)
-    os.rename(temp_folder, output_folder)
+#def delete_and_rearrange(output_folder, split_files):
+#    if len(split_files) < 2:
+#        print("Insufficient split files to rearrange.")
+#        return
+#
+#    os.remove(split_files[0])  # Delete the first split file
+#
+#    temp_folder = os.path.abspath("temp")
+#    os.makedirs(temp_folder, exist_ok=True)
+#
+#    for i, filename in enumerate(split_files[1:]):
+#        new_filename = os.path.join(temp_folder, f"reordered_part_{i+1}.mp4")
+#        shutil.copy(filename, new_filename)
+#
+#    shutil.rmtree(output_folder)
+#    os.rename(temp_folder, output_folder)
 
 def main():
     url_filename = "url.txt"
@@ -105,9 +105,9 @@ def main():
     input('press enter to cont \n')
     download_youtube_video(video_url, output_path)
     split_files = split_video(output_path, output_folder, split_duration)
-    delete_and_rearrange(output_folder, split_files)
+#   delete_and_rearrange(output_folder, split_files)
 
-    print("Video downloaded, split, first clip deleted, and clips rearranged successfully!")
+    print("Video downloaded, split!")
 
 if __name__ == "__main__":
     main()
