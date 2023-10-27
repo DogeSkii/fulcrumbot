@@ -7,6 +7,22 @@
 # doge.com will be sad if you fuck this up
 # i am
 # doge.com
+
+import subprocess
+
+# Define the required packages
+required_packages = ["yt-dlp", "moviepy"]
+
+# Check if each package is installed, and install it if not
+for package in required_packages:
+    try:
+        __import__(package)
+    except ImportError:
+        print(f"Installing {package}...")
+        subprocess.run(["pip", "install", package])
+
+# Now, you can import the packages
+
 import yt_dlp as ydl
 from moviepy.video.io.VideoFileClip import VideoFileClip
 import os
