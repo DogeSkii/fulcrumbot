@@ -7,6 +7,17 @@ then run main.py and cope for 1-5 minutes
 
 and kaabbooom you will have your split videos, now edit them or put text on em, whatever tickles your fancy
 
+# how install python for you noobs
+https://www.python.org/downloads/ <--- go here
+
+press download 
+
+run the installer
+
+now double click main.py and press enter to confirm settings
+
+
+
 
 ## funny notes
 yes i know this code is not very comprehensive
